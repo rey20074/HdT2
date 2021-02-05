@@ -39,15 +39,16 @@ public class MainJMR{
         StackVector<Integer> calculo = new StackVector<Integer>();
         Calculadora calcu = new Calculadora();
 
-        //se revisa si es entero o no
+        //se revisa si es numero o no
         for (String ope : op) {
 
             if(Character.isDigit(ope.charAt(0))){
-                // se inserta hasta el final del StackVector
+                //el push lo pone al final
                 calculo.push(Integer.parseInt(ope)); 
             }
 
-            else{ //si no es numero automaticamente lo considera como un operador
+            else{ 
+                //si no es numero, es un operador y se coloca como tal 
 
                 int x = calculo.pop();
                 int y = calculo.pop();
